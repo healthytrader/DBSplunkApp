@@ -1,0 +1,61 @@
+[props/dbinputCG]
+owner = admin
+version = 7.2.6
+modtime = 1560477106.744249000
+
+[props/source%3A%3A...ta-capgroupdbmonitor%2A.log%2A]
+owner = admin
+version = 7.2.6
+modtime = 1560477107.108804000
+
+[props/source%3A%3A...ta_capgroupdbmonitor%2A.log%2A]
+owner = admin
+version = 7.2.6
+modtime = 1560477107.442959000
+
+[ta_capgroupdbmonitor_settings/additional_parameters]
+version = 7.2.6
+modtime = 1561410487.979083000
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA-capgroupdbmonitor%23data%2Finputs%2Fdbinputcg%3Amysql1%60%60splunk_cred_sep%60%601%3A]
+owner = admin
+version = 7.2.6
+modtime = 1560950467.463668000
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA-capgroupdbmonitor%23data%2Finputs%2Fdbinputcg%3Amysql1%60%60splunk_cred_sep%60%602%3A]
+owner = admin
+version = 7.2.6
+modtime = 1560950467.506345000
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA-capgroupdbmonitor%23data%2Finputs%2Fdbinputcg%3Aabccsv%60%60splunk_cred_sep%60%601%3A]
+owner = admin
+version = 7.2.6
+modtime = 1560990672.321558000
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA-capgroupdbmonitor%23data%2Finputs%2Fdbinputcg%3Aabccsv%60%60splunk_cred_sep%60%602%3A]
+owner = admin
+version = 7.2.6
+modtime = 1560990672.344698000
+
+[ta_dbmonitor_settings/additional_parameters]
+version = 7.2.6
+modtime = 1561510258.258564000
+
+[app/install/install_source_checksum]
+version = 7.2.6
+modtime = 1561510137.828164000
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA-dbmonitor%23data%2Finputs%2Fdbinputcg%3AMySQLGroup1%60%60splunk_cred_sep%60%601%3A]
+owner = admin
+version = 7.2.6
+modtime = 1561511575.581107000
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA-dbmonitor%23data%2Finputs%2Fdbinputcg%3AMySQLGroup1%60%60splunk_cred_sep%60%602%3A]
+owner = admin
+version = 7.2.6
+modtime = 1561511575.612624000
+
+[inputs/dbinputcg%3A%2F%2FMySQLGroup1]
+owner = admin
+version = 7.2.6
+modtime = 1567031234.096614000

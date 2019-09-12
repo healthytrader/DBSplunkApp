@@ -1,0 +1,433 @@
+{
+    "pages": {
+        "configuration": {
+            "tabs": [
+                {
+                    "entity": [
+                        {
+                            "options": {
+                                "autoCompleteFields": [
+                                    {
+                                        "value": "DEBUG", 
+                                        "label": "DEBUG"
+                                    }, 
+                                    {
+                                        "value": "INFO", 
+                                        "label": "INFO"
+                                    }, 
+                                    {
+                                        "value": "WARNING", 
+                                        "label": "WARNING"
+                                    }, 
+                                    {
+                                        "value": "ERROR", 
+                                        "label": "ERROR"
+                                    }, 
+                                    {
+                                        "value": "CRITICAL", 
+                                        "label": "CRITICAL"
+                                    }
+                                ], 
+                                "disableSearch": true
+                            }, 
+                            "defaultValue": "INFO", 
+                            "field": "loglevel", 
+                            "type": "singleSelect", 
+                            "label": "Log level"
+                        }
+                    ], 
+                    "name": "logging", 
+                    "title": "Logging"
+                }, 
+                {
+                    "entity": [
+                        {
+                            "options": {
+                                "placeholder": "6b1413a3-d992-483f-9963-0778aadc7138"
+                            }, 
+                            "required": true, 
+                            "help": "", 
+                            "defaultValue": "6b1413a3-d992-483f-9963-0778aadc7138", 
+                            "field": "hec_token", 
+                            "type": "text", 
+                            "label": "HEC Token", 
+                            "validators": [
+                                {
+                                    "maxLength": 8192, 
+                                    "type": "string", 
+                                    "errorMsg": "Max length of text input is 8192", 
+                                    "minLength": 0
+                                }
+                            ]
+                        }, 
+                        {
+                            "options": {
+                                "placeholder": "localhost:8088"
+                            }, 
+                            "required": true, 
+                            "help": "", 
+                            "defaultValue": "localhost:8088", 
+                            "field": "hec_server_port", 
+                            "type": "text", 
+                            "label": "HEC Server:Port", 
+                            "validators": [
+                                {
+                                    "maxLength": 8192, 
+                                    "type": "string", 
+                                    "errorMsg": "Max length of text input is 8192", 
+                                    "minLength": 0
+                                }
+                            ]
+                        }, 
+                        {
+                            "options": {
+                                "placeholder": "/Users/mwiser/dbmonitor/splunk/etc/apps/TA-dbmonitor/static"
+                            }, 
+                            "required": true, 
+                            "help": "", 
+                            "defaultValue": "/Users/mwiser/dbmonitor/splunk/etc/apps/TA-dbmonitor/static", 
+                            "field": "workingdirectory", 
+                            "type": "text", 
+                            "label": "WorkingDirectory", 
+                            "validators": [
+                                {
+                                    "maxLength": 8192, 
+                                    "type": "string", 
+                                    "errorMsg": "Max length of text input is 8192", 
+                                    "minLength": 0
+                                }
+                            ]
+                        }, 
+                        {
+                            "options": {
+                                "placeholder": "-Xms256m -Xmx2048m"
+                            }, 
+                            "required": true, 
+                            "help": "", 
+                            "defaultValue": "-Xms256m -Xmx2048m", 
+                            "field": "java_parameters", 
+                            "type": "text", 
+                            "label": "Java Parameters", 
+                            "validators": [
+                                {
+                                    "maxLength": 8192, 
+                                    "type": "string", 
+                                    "errorMsg": "Max length of text input is 8192", 
+                                    "minLength": 0
+                                }
+                            ]
+                        }, 
+                        {
+                            "options": {
+                                "placeholder": "python /Users/mwiser/dbmonitor/splunk/etc/apps/TA-dbmonitor/static/getaccount.py -n "
+                            }, 
+                            "required": true, 
+                            "help": "", 
+                            "defaultValue": "python /Users/mwiser/dbmonitor/splunk/etc/apps/TA-dbmonitor/static/getaccount.py -n ", 
+                            "field": "cyberarkpath", 
+                            "type": "text", 
+                            "label": "CyberArkPath", 
+                            "validators": [
+                                {
+                                    "maxLength": 8192, 
+                                    "type": "string", 
+                                    "errorMsg": "Max length of text input is 8192", 
+                                    "minLength": 0
+                                }
+                            ]
+                        }, 
+                        {
+                            "options": {
+                                "placeholder": "Splunk"
+                            }, 
+                            "required": false, 
+                            "help": "", 
+                            "defaultValue": "Splunk", 
+                            "field": "ms_sql_is_domain", 
+                            "type": "text", 
+                            "label": "MS-SQL IS Domain", 
+                            "validators": [
+                                {
+                                    "maxLength": 8192, 
+                                    "type": "string", 
+                                    "errorMsg": "Max length of text input is 8192", 
+                                    "minLength": 0
+                                }
+                            ]
+                        }, 
+                        {
+                            "options": {
+                                "placeholder": "No"
+                            }, 
+                            "required": false, 
+                            "help": "", 
+                            "defaultValue": "No", 
+                            "field": "suicidemode", 
+                            "type": "text", 
+                            "label": "SuicideMode", 
+                            "validators": [
+                                {
+                                    "maxLength": 8192, 
+                                    "type": "string", 
+                                    "errorMsg": "Max length of text input is 8192", 
+                                    "minLength": 0
+                                }
+                            ]
+                        }
+                    ], 
+                    "name": "additional_parameters", 
+                    "title": "Add-on Settings"
+                }
+            ], 
+            "title": "Configuration", 
+            "description": "Set up your add-on"
+        }, 
+        "inputs": {
+            "table": {
+                "header": [
+                    {
+                        "field": "name", 
+                        "label": "Name"
+                    }, 
+                    {
+                        "field": "interval", 
+                        "label": "Interval"
+                    }, 
+                    {
+                        "field": "index", 
+                        "label": "Index"
+                    }, 
+                    {
+                        "field": "disabled", 
+                        "label": "Status"
+                    }
+                ], 
+                "moreInfo": [
+                    {
+                        "field": "name", 
+                        "label": "Name"
+                    }, 
+                    {
+                        "field": "interval", 
+                        "label": "Interval"
+                    }, 
+                    {
+                        "field": "index", 
+                        "label": "Index"
+                    }, 
+                    {
+                        "field": "disabled", 
+                        "label": "Status"
+                    }, 
+                    {
+                        "field": "serverlist", 
+                        "label": "ServerList"
+                    }, 
+                    {
+                        "field": "usesplunksearch", 
+                        "label": "UseSplunkSearch"
+                    }, 
+                    {
+                        "field": "search", 
+                        "label": "Search"
+                    }, 
+                    {
+                        "field": "splunkuser", 
+                        "label": "SplunkUser"
+                    }, 
+                    {
+                        "field": "splunkpassword", 
+                        "label": "SplunkPassword"
+                    }, 
+                    {
+                        "field": "splunkserver", 
+                        "label": "SplunkServer"
+                    }, 
+                    {
+                        "field": "splunkport", 
+                        "label": "SplunkPort"
+                    }
+                ], 
+                "actions": [
+                    "edit", 
+                    "enable", 
+                    "delete", 
+                    "clone"
+                ]
+            }, 
+            "services": [
+                {
+                    "entity": [
+                        {
+                            "required": true, 
+                            "help": "Enter a unique name for the data input", 
+                            "field": "name", 
+                            "type": "text", 
+                            "label": "Name", 
+                            "validators": [
+                                {
+                                    "type": "regex", 
+                                    "errorMsg": "Input Name must start with a letter and followed by alphabetic letters, digits or underscores.", 
+                                    "pattern": "^[a-zA-Z]\\w*$"
+                                }, 
+                                {
+                                    "maxLength": 100, 
+                                    "type": "string", 
+                                    "errorMsg": "Length of input name should be between 1 and 100", 
+                                    "minLength": 1
+                                }
+                            ]
+                        }, 
+                        {
+                            "required": true, 
+                            "help": "Time interval of input in seconds.", 
+                            "field": "interval", 
+                            "type": "text", 
+                            "label": "Interval", 
+                            "validators": [
+                                {
+                                    "type": "regex", 
+                                    "errorMsg": "Interval must be an integer.", 
+                                    "pattern": "^\\-[1-9]\\d*$|^\\d*$"
+                                }
+                            ]
+                        }, 
+                        {
+                            "field": "index", 
+                            "defaultValue": "default", 
+                            "options": {
+                                "blackList": "^_.*$", 
+                                "createSearchChoice": true, 
+                                "endpointUrl": "data/indexes"
+                            }, 
+                            "type": "singleSelect", 
+                            "label": "Index", 
+                            "required": true, 
+                            "validators": [
+                                {
+                                    "maxLength": 80, 
+                                    "type": "string", 
+                                    "errorMsg": "Length of index name should be between 1 and 80.", 
+                                    "minLength": 1
+                                }
+                            ]
+                        }, 
+                        {
+                            "options": {
+                                "placeholder": "mssql1.csv"
+                            }, 
+                            "required": true, 
+                            "help": "", 
+                            "defaultValue": "mssql1.csv", 
+                            "field": "serverlist", 
+                            "type": "text", 
+                            "label": "ServerList", 
+                            "validators": [
+                                {
+                                    "maxLength": 8192, 
+                                    "type": "string", 
+                                    "errorMsg": "Max length of text input is 8192", 
+                                    "minLength": 0
+                                }
+                            ]
+                        }, 
+                        {
+                            "type": "checkbox", 
+                            "field": "usesplunksearch", 
+                            "required": false, 
+                            "label": "UseSplunkSearch", 
+                            "help": ""
+                        }, 
+                        {
+                            "required": false, 
+                            "help": "", 
+                            "field": "search", 
+                            "type": "text", 
+                            "label": "Search", 
+                            "validators": [
+                                {
+                                    "maxLength": 8192, 
+                                    "type": "string", 
+                                    "errorMsg": "Max length of text input is 8192", 
+                                    "minLength": 0
+                                }
+                            ]
+                        }, 
+                        {
+                            "required": false, 
+                            "help": "", 
+                            "field": "splunkuser", 
+                            "type": "text", 
+                            "label": "SplunkUser", 
+                            "validators": [
+                                {
+                                    "maxLength": 8192, 
+                                    "type": "string", 
+                                    "errorMsg": "Max length of text input is 8192", 
+                                    "minLength": 0
+                                }
+                            ]
+                        }, 
+                        {
+                            "field": "splunkpassword", 
+                            "help": "", 
+                            "required": false, 
+                            "encrypted": true, 
+                            "type": "text", 
+                            "label": "SplunkPassword", 
+                            "validators": [
+                                {
+                                    "maxLength": 8192, 
+                                    "type": "string", 
+                                    "errorMsg": "Max length of password is 8192", 
+                                    "minLength": 0
+                                }
+                            ]
+                        }, 
+                        {
+                            "required": false, 
+                            "help": "", 
+                            "field": "splunkserver", 
+                            "type": "text", 
+                            "label": "SplunkServer", 
+                            "validators": [
+                                {
+                                    "maxLength": 8192, 
+                                    "type": "string", 
+                                    "errorMsg": "Max length of text input is 8192", 
+                                    "minLength": 0
+                                }
+                            ]
+                        }, 
+                        {
+                            "required": false, 
+                            "help": "", 
+                            "field": "splunkport", 
+                            "type": "text", 
+                            "label": "SplunkPort", 
+                            "validators": [
+                                {
+                                    "maxLength": 8192, 
+                                    "type": "string", 
+                                    "errorMsg": "Max length of text input is 8192", 
+                                    "minLength": 0
+                                }
+                            ]
+                        }
+                    ], 
+                    "name": "dbinputcg", 
+                    "title": "dbinputCG"
+                }
+            ], 
+            "title": "Inputs", 
+            "description": "Manage your data inputs"
+        }
+    }, 
+    "meta": {
+        "version": "1.0.0", 
+        "displayName": "DBMonitor", 
+        "apiVersion": "3.0.0", 
+        "name": "TA-dbmonitor", 
+        "restRoot": "TA_dbmonitor"
+    }
+}

@@ -1,0 +1,5 @@
+HEC=6b1413a3-d992-483f-9963-0778aadc7138
+HECServer=localhost:8088
+CyberArk=python /Users/mwiser/dbmonitor/splunk/etc/apps/TA-dbmonitor/static/getaccount.py -n
+WindowsDomain=SQL
+SuicideMode=23:55
